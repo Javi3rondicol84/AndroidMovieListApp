@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Seminary</string>
+    <string name="language">en-US</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="movie_synopsis">Movie synopsis</string>
+    <string name="rating_label">Rating: </string>
+    <string name="genres_label">Genres: </string>
+    <string name="returnButton">Return back</string>
+
+    <!-- buscar pelicula -->
+
+    <string name="input_search_movie">Search a movie...</string>
+    <string name="no_search_content">No content found for the search</string>
+
+    <!-- mensajes de error -->
+    <string name="error_no_internet">No Internet</string>
+    <string name="error_no_content">No Content</string>
+    <string name="error_response">Response Error</string>
+    <string name="error_api">Api Error</string>
+
+</resources>

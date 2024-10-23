@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Seminario</string>
+    <string name="language">es-ES</string>
+
+    <!-- informacion de la pelicula -->
+    <string name="movie_title">Titulo de pelicula</string>
+    <string name="movie_synopsis">Sinopsis de pelicula</string>
+    <string name="rating_label">Rating: </string>
+    <string name="genres_label">Generos: </string>
+    <string name="returnButton">Volver atrás</string>
+
+    <!-- buscar pelicula -->
+
+    <string name="input_search_movie">Buscar una pelicula...</string>
+    <string name="no_search_content">No hay resultados para la búsqueda</string>
+
+    <!-- mensajes de error -->
+    <string name="error_no_internet">No hay internet</string>
+    <string name="error_no_content">No hay contenido</string>
+    <string name="error_response">Error en la respuesta</string>
+    <string name="error_api">Error en la api</string>
+
+</resources>
