@@ -8,7 +8,7 @@ data class MovieDto (
     @SerializedName("title")
     val title: String,
     @SerializedName("poster_path")
-    val picture: String,
+    val picture: String?,
 ){
 
     fun toMovie(): Movie {

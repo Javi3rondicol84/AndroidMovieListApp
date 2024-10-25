@@ -41,8 +41,6 @@ class MoviesActivity : AppCompatActivity() {
                 val language = getString(R.string.language)
                 if (query.isNotBlank()) {
 
-                    Toast.makeText(this, "escribiste $query", Toast.LENGTH_SHORT).show()
-
                     viewModel.getMoviesBySearch(query, language)
 
                 } else {
@@ -107,8 +105,8 @@ class MoviesActivity : AppCompatActivity() {
             else if(errorMessage == ErrorType.ERROR_RESPONSE) {
                 Toast.makeText(this, R.string.error_response, Toast.LENGTH_LONG).show()
             }
-            else if(errorMessage == ErrorType.ERROR_API) {
-                Toast.makeText(this, R.string.error_api, Toast.LENGTH_LONG).show()
+            else if(errorMessage == ErrorType.ERROR_UNEXPECTED) {
+                Toast.makeText(this, R.string.error_unexpected, Toast.LENGTH_LONG).show()
             }
 
             viewModel.clearError()
@@ -117,10 +115,10 @@ class MoviesActivity : AppCompatActivity() {
 
         viewModel.noContentSearch.onEach { noContent ->
             if(noContent) {
-                binding.noContentSearch?.visibility = View.VISIBLE
+                binding.noContentSearch.visibility = View.VISIBLE
             }
             else {
-                binding.noContentSearch?.visibility = View.INVISIBLE
+                binding.noContentSearch.visibility = View.INVISIBLE
             }
         }.launchIn(lifecycleScope)
 

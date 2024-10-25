@@ -48,7 +48,7 @@ class MovieRepositoryDataSource @Inject constructor(
                         moviesResponseInfo.error = ErrorType.NO_INTERNET
                     }
                     else -> {
-                        moviesResponseInfo.error = ErrorType.ERROR_API
+                        moviesResponseInfo.error = ErrorType.ERROR_UNEXPECTED
                     }
                 }
 
@@ -86,7 +86,7 @@ class MovieRepositoryDataSource @Inject constructor(
                         movieDetailResponseInfo.error = ErrorType.NO_INTERNET
                     }
                     else -> {
-                        movieDetailResponseInfo.error = ErrorType.ERROR_API
+                        movieDetailResponseInfo.error = ErrorType.ERROR_UNEXPECTED
                     }
                 }
 
@@ -120,12 +120,13 @@ class MovieRepositoryDataSource @Inject constructor(
                 }
 
             } catch (e: Exception) {
+                e.printStackTrace()
                 when(e) {
                     is IOException -> {
                         moviesResponseInfo.error = ErrorType.NO_INTERNET
                     }
                     else -> {
-                        moviesResponseInfo.error = ErrorType.ERROR_API
+                        moviesResponseInfo.error = ErrorType.ERROR_UNEXPECTED
                     }
                 }
 

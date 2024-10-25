@@ -10,7 +10,7 @@ data class MovieDetailDto (
     @SerializedName("title")
     val title: String,
     @SerializedName("poster_path")
-    val picture: String,
+    val picture: String?,
     @SerializedName("overview")
      val synopsis: String,
     @SerializedName("vote_average")

@@ -74,6 +74,14 @@ class MovieDetailActivity : AppCompatActivity() {
                 if (!movieDetail.picture.isNullOrEmpty()) {
                     Glide.with(this)
                         .load("https://image.tmdb.org/t/p/w500/${movieDetail.picture}")
+                        .placeholder(R.drawable.movie_main_image_app)
+                        .error(R.drawable.movie_main_image_app)
+                        .into(binding.movieImage)
+                }
+                else {
+                    Glide.with(this)
+                        .load(R.drawable.movie_main_image_app) //imagen default cuando no se haya ninguna otra
+                        .placeholder(R.drawable.movie_main_image_app)
                         .into(binding.movieImage)
                 }
 
@@ -82,7 +90,8 @@ class MovieDetailActivity : AppCompatActivity() {
                 binding.movieSynopsis.text = ""
                 binding.movieRating.text = ""
                 binding.movieGenres.text = ""
-                //binding.movieImage.setImageResource(R.drawable.placeholder) // Set a placeholder image if no picture
+                binding.genresLabel.text = ""
+                binding.ratingLabel.text = ""
 
             }
 
@@ -105,8 +114,8 @@ class MovieDetailActivity : AppCompatActivity() {
             else if(errorMessage == ErrorType.ERROR_RESPONSE) {
                 Toast.makeText(this, R.string.error_response, Toast.LENGTH_LONG).show()
             }
-            else if(errorMessage == ErrorType.ERROR_API) {
-                Toast.makeText(this, R.string.error_api, Toast.LENGTH_LONG).show()
+            else if(errorMessage == ErrorType.ERROR_UNEXPECTED) {
+                Toast.makeText(this, R.string.error_unexpected, Toast.LENGTH_LONG).show()
             }
             viewModel.clearError()
         }.launchIn(lifecycleScope)

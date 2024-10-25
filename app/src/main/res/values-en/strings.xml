@@ -17,6 +17,6 @@
     <string name="error_no_internet">No Internet</string>
     <string name="error_no_content">No Content</string>
     <string name="error_response">Response Error</string>
-    <string name="error_api">Api Error</string>
+    <string name="error_unexpected">Unexpected Error</string>
 
 </resources>
