@@ -18,6 +18,6 @@
     <string name="error_no_internet">No hay internet</string>
     <string name="error_no_content">No hay contenido</string>
     <string name="error_response">Error en la respuesta</string>
-    <string name="error_api">Error en la api</string>
+    <string name="error_unexpected">Error inesperado</string>
 
 </resources>

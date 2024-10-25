@@ -4,6 +4,6 @@ enum class ErrorType {
     NO_INTERNET,
     NO_CONTENT,
     ERROR_RESPONSE,
-    ERROR_API,
+    ERROR_UNEXPECTED,
     NO_ERROR
 }
